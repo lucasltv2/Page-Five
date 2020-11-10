@@ -1,0 +1,142 @@
+body{
+  display: flex;
+  justify-content: center;
+  background: grey;
+}
+
+#content{
+  position: relative;
+  top: 10px;
+  width: 500px;
+  height: 500px;
+/*  background: white; */
+}
+
+#sidepanel{
+  top: -30px;
+  left: 420px;
+  position: relative;
+  width: 150px;
+  height: 450px;
+  background: #666666;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+#antena1{
+  top: 259px;
+  left: 190px;
+  position: relative;
+  width: 10px;
+  height: 200px;
+  background: #000000;
+  transform: rotate(-45deg);
+}
+
+#antena1knob{
+  top: -16px;
+  left: -5px;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background: #000000;
+}
+
+
+#antena2{
+  top: 59px;
+  left: 380px;
+  position: relative;
+  width: 10px;
+  height: 200px;
+  background: #000000;
+  transform: rotate(45deg);
+}
+
+#antena2knob{
+  top: -16px;
+  left: -5px;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background: #000000;
+}
+
+#outline{
+  top: 25px;
+  left: 25px;
+  position: relative;
+  width: 450px;
+  height: 450px;
+  background: #303030;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+#screen{
+  top: 30px;
+  left: 30px;
+  position: relative;
+  width: 385px;
+  height: 385px;
+  border-radius: 8px;
+  background: #FFFFFF;
+  animation-name: colorChange;
+  animation-duration: 10s;
+  animation-play-state: inherit;
+  animation-iteration-count: infinite;
+  }
+
+
+@keyframes colorChange {
+
+  0% {background: red; }
+
+  33% {background: green; }
+
+  66% {background: blue; }
+
+  100% {background: red; }
+
+}
+
+#button1{
+  top: -345px;
+  left: 480px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  position: relative;
+  background: #000000;
+}
+
+#button1:hover{
+  background: #cccccc;
+}
+
+#button2{
+  top: -245px;
+  left: 480px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  position: relative;
+  background: #000000;
+}
+
+#button2:hover{
+  background: #cccccc;
+
+}
+
+@keyframes onAndOff {
+
+  0% {background: white; }
+
+  100% {background: black; }
+
+}
