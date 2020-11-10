@@ -13,8 +13,7 @@ body{
 }
 
 #sidepanel{
-  top: -30px;
-  left: 420px;
+  left: 450px;
   position: relative;
   width: 150px;
   height: 450px;
@@ -25,7 +24,7 @@ body{
 
 #antena1{
   top: 259px;
-  left: 190px;
+  left: 155px;
   position: relative;
   width: 10px;
   height: 200px;
@@ -43,10 +42,9 @@ body{
   background: #000000;
 }
 
-
 #antena2{
   top: 59px;
-  left: 380px;
+  left: 330px;
   position: relative;
   width: 10px;
   height: 200px;
@@ -76,19 +74,24 @@ body{
 }
 
 #screen{
-  top: 30px;
-  left: 30px;
+  top: -108px;
+  right: 475px;
   position: relative;
   width: 385px;
   height: 385px;
   border-radius: 8px;
-  background: #FFFFFF;
-  animation-name: colorChange;
-  animation-duration: 10s;
-  animation-play-state: inherit;
-  animation-iteration-count: infinite;
-  }
+  background: #000000; /* black */
+}
 
+#screen2{
+  top: -248px;
+  right: 475px;
+  position: relative;
+  width: 385px;
+  height: 385px;
+  border-radius: 8px;
+  background: #FFFFFF; /* white */
+}
 
 @keyframes colorChange {
 
@@ -102,24 +105,49 @@ body{
 
 }
 
+@keyframes onAndOff {
+
+  0% {background: black; }
+
+  100% {background: white; }
+
+}
+
 #button1{
-  top: -345px;
-  left: 480px;
+  top: -330px;
+  left: 510px;
   cursor: pointer;
   width: 40px;
   height: 40px;
   border-radius: 20px;
   position: relative;
   background: #000000;
+}
+
+#text{
+  top: -35px;
+  right: 5px;
+  font-size: 18px;
+  position: relative;
 }
 
 #button1:hover{
   background: #cccccc;
 }
 
+#button1:active #screen{
+  animation: onAndOff 3s 1;
+  background: white;
+
+}
+
+#button1:not(:active) #screen{
+  background: #FFFFFF;
+}
+
 #button2{
-  top: -245px;
-  left: 480px;
+  top: -230px;
+  left: 510px;
   cursor: pointer;
   width: 40px;
   height: 40px;
@@ -128,15 +156,21 @@ body{
   background: #000000;
 }
 
-#button2:hover{
-  background: #cccccc;
-
+#text2{
+  top: 60px;
+  right: 10px;
+  font-size: 18px;
+  position: relative;
 }
 
-@keyframes onAndOff {
+#button2:hover{
+  background: #cccccc;
+}
 
-  0% {background: white; }
+#button2:active #screen2{
+  animation: colorChange 10s infinite;
+}
 
-  100% {background: black; }
-
+#button2:not(:active) #screen2{
+  visibility: hidden;
 }
